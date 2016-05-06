@@ -205,9 +205,12 @@ public class Main {
 	}
 
 	@RequestMapping(value = "/modificar_elecciones")
-	public String modificar(Elecciones elecciones, Model model) {
+	public String modificar(Elecciones elecciones, Model model, HttpSession session) {
 		LOG.info("Modificar elecciones page access");
-		return "/modificar_elecciones";
+			if (session.getAttribute("usuario").equals("junta")) {
+				return "/modificar_elecciones";
+			}
+		return "error";
 	}
 
 	@RequestMapping(value = "/modificar_elecciones", method = RequestMethod.POST)

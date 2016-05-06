@@ -4,3 +4,9 @@ Fri May 06 13:32:46 CEST 2016 INFO La carta en formato PDF para este usuario ya 
 Fri May 06 13:32:46 CEST 2016 INFO La carta en formato TXT para este usuario ya existe
 Fri May 06 13:32:46 CEST 2016 INFO La carta en formato PDF para este usuario ya existe
 Fri May 06 13:32:46 CEST 2016 INFO La carta en formato TXT para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato PDF para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato TXT para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato PDF para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato TXT para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato PDF para este usuario ya existe
+Fri May 06 14:01:39 CEST 2016 INFO La carta en formato TXT para este usuario ya existe

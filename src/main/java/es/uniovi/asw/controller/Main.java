@@ -214,9 +214,11 @@ public class Main {
 	}
 
 	@RequestMapping(value = "/modificar_elecciones", method = RequestMethod.POST)
-	public String addElecciones(Elecciones elecciones, Model model) {
+	public String addElecciones(Elecciones elecciones, Model model, HttpSession session) {
 		LOG.info("Modificar elecciones page access");
+		if (session.getAttribute("usuario").equals("junta")) {
 		try {
+			
 			if (elecciones.getNombre() != null && elecciones.getFechaInicio() instanceof Date
 					&& elecciones.getFechaFin() instanceof Date
 					&& elecciones.getFechaFin().after(elecciones.getFechaInicio())) {
@@ -250,6 +252,8 @@ public class Main {
 			LOG.info("No se han podido convocar nuevas elecciones");
 			return "/modificar_elecciones";
 		}
+		}
+		return "error";
 	}
 
 	/**

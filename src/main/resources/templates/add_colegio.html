@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div th:replace="fragments/header :: cabecera"></div>
+	
+	<div align="center">
+	<h2>Nuevo colegio electoral</h2>
+		<form id="colegio-form" action="#" th:action="@{/add_colegio}"
+			method="post" th:object="${colegioElectoral}">
+
+			<label class="etiqueta_cod_colegio" for="cod_colegio">Código
+				del colegio: </label> 
+			<input class="cod_colegio" type="text" th:field="*{codigoColegio}" /> 
+			<br></br> 
+			<input class="circunscripcion_colegio" placeholder="Circunscripción"
+			type="text" th:field="*{circunscripcion}" /> 
+			<br></br> 
+			<input class="ca_colegio" placeholder="Comunidad Autónoma" type="text"
+			th:field="*{comunidadAutonoma}" />
+			 <br></br> <br></br> <br></br> <br></br>
+
+			<button type="submit" class="boton_colegio">AÑADIR</button>
+		</form>
+	</div>
+	
+	<div  th:if="${mensaje != null}" class="mensaje" align="center">
+		 <p class="mostrar_mensaje" th:text="${mensaje}"></p>
+	</div>
+
+	<a href="modificar_elecciones.html" class="ref_return">&#8617;</a> 
+</body>
+</html>

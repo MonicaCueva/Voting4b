@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div th:replace="fragments/header :: cabecera"></div>
+	<div align="center">
+		<img src="../images/logo.gif"></img>
+		<div th:if="${mensaje != null}" class="mensaje" align="center">
+			<p class="mostrar_mensaje" th:text="${mensaje}"></p>
+		</div>
+	</div>
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

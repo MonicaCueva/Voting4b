@@ -1,0 +1,61 @@
+body {
+   background-image:
+		url("http://static1.squarespace.com/static/554578efe4b06698c529a224/t/56e19eaac2ea51840bab4376/1457626796511/Election+Background.jpg?format=1500w");
+	background-size: cover;
+	overflow: auto;
+}
+
+
+h1 {
+    color: paleturquoise;
+    font: bold 65px Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#subTitle {
+    color: white;
+    font: 30px Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -50px;
+}
+
+#subTitle2 {
+    color: white;
+    font: 30px Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+header {
+    margin-bottom: 70px;
+}
+
+#pieResultados {
+	margin-left: 200px;
+}
+
+#resultadoTexto {
+	margin-top: -55px;
+	color: white;
+    font: 30px Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icono_return {
+	outline: none;
+	border: none;
+	margin-left: 5%;
+}
+
+input[name=volver_atras] {
+	color: #fff;
+	font-size: 70px;
+	background: transparent;
+	margin-top: -5rem;
+	margin-right: 40rem;
+	cursor: pointer;
+}

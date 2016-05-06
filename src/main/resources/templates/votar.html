@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form id="cerrar-form" role="form" th:action="@{/cerrarSesion}"
+		method="post">
+		<button class="boton_cerrar" type="submit" id="cerrar"
+			title="Cerrar sesión">&#10005;</button>
+	</form>
+	<div th:replace="fragments/header :: cabecera"></div>
+	
+	<div align="center">
+		<h2>Votar</h2>
+		<form id="votar-form" action="#" th:action="@{/votar}" method="post"
+			th:object="${voto}">
+
+
+			<br></br> <br></br> <br></br> <label class="lista_opciones"
+				for="lista_opciones">Lista de opciones: </label>
+
+
+			<div class="tabla_opciones">
+				<table>
+					<tr th:each="opcion : ${opciones}">
+						<td th:text="${opcion.name()}"></td>
+					</tr>
+				</table>
+			</div>
+
+
+			<input class="input_opcion" placeholder="Opcion" type="text"
+				th:field="*{opcion}" />
+
+			<button type="submit" class="boton_votar">VOTAR</button>
+		</form>
+	</div>
+	
+	<div  th:if="${mensaje != null}" class="mensaje" align="center">
+		 <p class="mostrar_mensaje" th:text="${mensaje}"></p>
+	</div>
+
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

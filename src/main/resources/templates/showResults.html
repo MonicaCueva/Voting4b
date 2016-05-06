@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Resultados Elecciones 2016</title>
+<!-- import plugin script -->
+<script src='js/Chart.js'></script>
+<link type="text/css" href="css/showResultsStyle.css" rel="stylesheet" />
+</head>
+<body onload="funcionTimer()">
+
+	<header>
+		<h1 th:text="${nombreElecciones}" />
+		<p th:text="${ultimaActualizacion}" id="subTitle" />
+		<p th:text="${votosContabilizados}" id="subTitle2" />
+		<p th:text="${porcentajes}" id="subTitle2" />
+	</header>
+
+	<p th:text="${resultadosString}" id="resultadoTexto" />
+	<div align="center">
+	<img src="../images/coloresGrafica.png"></img>
+	<canvas id="pieResultados" width="800" height="500" style="width: 600px; height: 400px;"></canvas>
+
+	
+		<!-- bar chart canvas element -->
+		<script th:inline="javascript">
+
+            var array = [[${resultados}]];
+
+           // pie chart data
+            var pieData = [
+                {
+                    value: array[0],
+                    color : "#00FF00"
+                },
+                {
+                    value : array[1],
+                    color: "#FF0000"
+                },
+                {
+                    value : array[2],
+                    color : "#FFFF00"
+                },
+                {
+                    value : array[3],
+                    color : "#FFFFFF"
+                }
+            ];
+            // pie chart options
+            var pieOptions = {
+                 segmentShowStroke : false,
+                 animateScale : true
+            }
+
+            // get pie chart canvas
+            var resultadosPie= document.getElementById("pieResultados").getContext("2d");
+
+            // draw pie chart
+            new Chart(resultadosPie).Pie(pieData, pieOptions);
+	
+            
+            function funcionTimer() {
+                setTimeout(function(){ 
+                	if ([[${refrescar}]]) {
+                 		window.location.reload();
+                }; }, 10000);
+            }
+            
+        </script>
+	</div>
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

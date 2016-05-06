@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<head th:replace="fragments/header :: head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form id="cerrar-form" role="form" th:action="@{/cerrarSesion}"
+		method="post">
+		<button class="boton_cerrar" type="submit" id="cerrar"
+			title="Cerrar sesión">&#10005;</button>
+	</form>
+	<div th:replace="fragments/header :: cabecera"></div>
+
+
+	<div class="cerrar_sesion_body" align="center">
+
+		<a id="perfil_votante" href="InfoPage.html" title="Perfil votante"> <i
+				class="material-icons">perm_identity</i></a>
+				
+		<a id="votarPerfil" href="votar.html" title="Votar"><i
+				class="material-icons">email</i></a> 
+
+
+	</div>
+
+
+</body>
+</html>

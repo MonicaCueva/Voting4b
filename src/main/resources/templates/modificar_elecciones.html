@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/datepicker.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+
+<link type="text/css" href="css/bootstrap.min.css" />
+<link type="text/css" href="css/bootstrap-timepicker.min.css" />
+
+
+</head>
+<body>
+	<form id="cerrar-form" role="form" th:action="@{/cerrarSesion}"
+		method="post">
+		<button class="boton_cerrar" type="submit" id="cerrar"
+			title="Cerrar sesión">&#10005;</button>
+	</form>
+	<div th:replace="fragments/header :: cabecera"></div>
+
+	<div align="center">
+		<h2>Crear elecciones</h2>
+		<form id="modificar-form" action="#"
+			th:action="@{/modificar_elecciones}" method="post"
+			th:object="${elecciones}">
+
+			<input class="nombre_elecciones"
+				placeholder="Nombre de las elecciones" type="text"
+				th:field="*{nombre}" /> <br></br> <label
+				class="etiqueta_fecha_inicial" for="fecha_inicial"> Fecha
+				inicial de las elecciones: </label> <input id="fecha_inicial"
+				class="fecha_inicial" type="text" th:field="*{fechaInicio}"
+				placeholder="aaaa/mm/dd hh:mm" /> <br></br> <label
+				class="etiqueta_fecha_final" for="fecha_final"> Fecha final
+				de las elecciones: </label> <input id="fecha_final" class="fecha_final"
+				type="text" th:field="*{fechaFin}" placeholder="aaaa/mm/dd hh:mm" />
+			<br></br> <br></br> <br></br>
+
+
+			<a href="add_colegio.html" class="boton_add_colegio">NUEVO COLEGIO ELECTORAL</a> 
+			<br></br> <br></br> <br></br>
+
+			<button type="submit" class="boton_modificar">CREAR</button>
+
+
+		</form>
+		<div th:if="${mensaje != null}" class="mensaje" align="center">
+			<p class="mostrar_mensaje" th:text="${mensaje}"></p>
+		</div>
+
+	</div>
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

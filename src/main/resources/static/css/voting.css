@@ -1,0 +1,280 @@
+@CHARSET "ISO-8859-1";
+
+h1 {
+	text-align:center;
+	font-size: 70px;
+	font-weight: 100;
+	color: #eee;
+}
+
+h2 {
+	text-align:center;
+	margin-top: 1%;
+	font-size: 40px;
+	font-weight: 200;
+	color: #eee;
+	font-style: oblique;
+}
+
+img {
+	margin-top: 5%;
+	width: 15%;
+}
+
+p {
+	margin-top: 5%;
+	color: #eee;
+	font-size: 18px;
+}
+
+a {
+	font-size: 17px;
+	font-weight: 500;
+	color: #EEEEEE;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	position: relative;
+	height: 100%;
+	background-image:
+		url("http://static1.squarespace.com/static/554578efe4b06698c529a224/t/56e19eaac2ea51840bab4376/1457626796511/Election+Background.jpg?format=1500w");
+	background-size: cover;
+	overflow: auto;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.material-icons {
+	margin-top: 10%;
+	font-size: 200px;
+}
+
+.boton_cerrar {
+	margin-top: 1%;
+	margin-left: 95%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	color: #fff;
+	font-size: 50px;
+	outline: none;
+}
+
+.cerrar_sesion_body {
+	margin-top: -5%;
+}
+
+#votarPerfil {
+	margin-right: 35%;
+}
+
+#resultados {
+	margin-right: 20%;
+}
+
+#perfil_votante {
+	margin-left: 35%;
+}
+
+#modificar_elecciones {
+	margin-left: 20%;
+}
+
+a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+a.tooltip:hover span {
+	display: inline;
+	position: absolute;
+	color: #fff;
+	font-size: 40px;
+	line-height: 120%;
+}
+
+.boton_votar, .boton_modificar {
+	letter-spacing: .5em;
+	text-decoration: none;
+	padding: 0.75em 1.25em 0.75em 1.75em;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+	white-space: nowrap;
+	border-radius: 5px;
+	color: white;
+	background-color: transparent;
+	text-align: center;
+	font-family: futura;
+}
+
+.boton_add_colegio, .boton_colegio, .boton_login, .boton_change,
+	.boton_save, .boton_add_referendum, .boton_add_otras_elecciones,
+	.boton_fin_votos {
+	font-size: 17px;
+	text-decoration: none;
+	padding: 0.50em 1.10em 0.50em 1.50em;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+	white-space: nowrap;
+	border-radius: 5px;
+	color: white;
+	background-color: transparent;
+	text-align: center;
+	font-family: futura;
+}
+
+a:-webkit-any-link {
+	cursor: auto;
+}
+
+button.boton_votar:hover, button.boton_modificar:hover, a.boton_add_colegio:hover,
+	button.boton_colegio:hover, button.boton_login:hover, button.boton_change:hover,
+	button.boton_save:hover, a.boton_add_referendum:hover, a.boton_add_otras_elecciones:hover,
+	button.boton_fin_votos:hover
+	{
+	background: #310B54;
+}
+
+.input_opcion, #field1, .boton_change, .tabla_info_page {
+	margin-top: 5%;
+}
+
+#field2, .boton_login {
+	margin-top: 1%;
+}
+
+.input_opcion {
+	color: #734A99;
+	outline: none;
+	border: none;
+	padding: 20px;
+	font-size: 24px;
+	box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.7);
+	transition: transform 0.5s cubic-bezier(0.67, -0.33, 0.62, 1.35),
+		box-shadow 0.4s ease;
+	margin-right: 10px;
+}
+
+.nombre_elecciones, .opciones_voto, .fecha_inicial, .fecha_final,
+	.hora_inicial, .hora_final, .nombre_partido, .circunscripcion_colegio,
+	.ca_colegio {
+	color: #734A99;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.7);
+	transition: transform 0.5s cubic-bezier(0.67, -0.33, 0.62, 1.35),
+		box-shadow 0.4s ease;
+	margin-right: 10px;
+}
+
+.cod_colegio, #field1, #field2 {
+	color: #734A99;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 18px;
+	box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.7);
+	transition: transform 0.5s cubic-bezier(0.67, -0.33, 0.62, 1.35),
+		box-shadow 0.4s ease;
+	margin-right: 10px;
+}
+
+.nombre_elecciones, .opciones_voto, .fecha_inicial, .fecha_final,
+	.hora_inicial, .hora_final, .nombre_partido, .cod_colegio,
+	.circunscripcion_colegio, .ca_colegio {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.nombre_elecciones, .nombre_partido, .cod_colegio, .lista_opciones,
+	.boton_save {
+	margin-top: 3%;
+}
+
+input.input_opcion:focus, input.nombre_elecciones:focus, input.opciones_voto:focus,
+	input.fecha_inicial:focus, input.fecha_final:focus, input.hora_inicial:focus,
+	input.hora_final:focus, input.nombre_partido:focus, input.cod_colegio:focus,
+	input.circunscripcion_colegio:focus, input.ca_colegio:focus, input#field1:focus,
+	input#field2:focus {
+	box-shadow: 10px 2px 50px #000;
+	transform: scale(1.5, 1.5);
+}
+
+.etiqueta_fecha_inicial, .etiqueta_fecha_final, .lista_opciones,
+	.etiqueta_cod_colegio, .etiqueta_email, .etiqueta_password,
+	.etiqueta_password_change {
+	font-size: 25px;
+	font-weight: 100;
+	color: #eee;
+}
+
+.lista_opciones, .etiqueta_cod_colegio {
+	font-size: 18px;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-color: #eee;
+	color: #eee;
+	text-align: center;
+}
+
+table {
+	margin-top: 1%;
+	border-collapse: collapse;
+	width: 8%;
+}
+
+.tabla_info_page {
+	width: 35%;
+}
+
+input[name=volver_atras] {
+	color: #fff;
+	font-size: 70px;
+	background: transparent;
+	margin-top: -5rem;
+	margin-right: 40rem;
+	cursor: pointer;
+}
+
+.icono_return {
+	outline: none;
+	border: none;
+	margin-left: 5%;
+}
+
+.mostrar_mensaje {
+	margin-top: 3%;
+	font-size: 25px;
+	font-weight: 100;
+	color: #eee;
+	font-size: 18px;
+}
+
+.ref_return {
+	color: #fff;
+	text-decoration:none;
+	font-size: 70px;
+	background: transparent;
+	margin-top: -5rem;
+	margin-right: 40rem;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	margin-left: 5%;
+}
+
+a.ref_return:hover{
+	background-color:transparent;
+}

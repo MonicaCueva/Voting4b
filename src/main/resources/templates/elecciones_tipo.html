@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+</head>
+<body>
+	<form id="cerrar-form" role="form" th:action="@{/cerrarSesion}"
+		method="post">
+		<button class="boton_cerrar" type="submit" id="cerrar"
+			title="Cerrar sesión">&#10005;</button>
+	</form>
+	<div th:replace="fragments/header :: cabecera"></div>
+
+	<div align="center">
+		<h2>Tipo de elecciones</h2>
+
+			<br></br> <br></br> <br></br>
+			<a href="modificar_elecciones.html" class="boton_add_referendum"> REFERÉNDUM</a>
+			 <br></br> <br></br> <br></br>
+				
+			<a href="esperar_tipos.html" class="boton_add_otras_elecciones"> OTRAS ELECCIONES</a> 
+
+			<br></br> <br></br> <br></br>
+			<form id="fin-votos-form" role="form" th:action="@{/finVotos}"
+				method="post">
+				<button class="boton_fin_votos" type="submit" id="fin_votos">LLEGADA DE VOTOS TERMINADA</button>
+			</form>
+	</div>
+	
+	<div  th:if="${mensaje != null}" class="mensaje" align="center">
+		 <p class="mostrar_mensaje" th:text="${mensaje}"></p>
+	</div>
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

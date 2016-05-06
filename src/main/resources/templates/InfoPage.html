@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head">
+</head>
+<body>
+	<form id="cerrar-form" role="form" th:action="@{/cerrarSesion}"
+		method="post">
+		<button class="boton_cerrar" type="submit" id="cerrar"
+			title="Cerrar sesión">&#10005;</button>
+	</form>
+	<h1>Voter Info</h1>
+
+	<div align="center">
+		<table class="tabla_info_page">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Nif</th>
+					<th>Email</th>
+					<th>Polling Station Code</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="atribute : ${session.atributes}">
+					<td th:text="${atribute.name}" />
+					<td th:text="${atribute.nif}" />
+					<td th:text="${atribute.email}" />
+					<td th:text="${atribute.pollingStationCode}" />
+				</tr>
+			</tbody>
+		</table>
+
+		<form id="gizmo-form" role="form" th:action="@{/changePassword}"
+			method="post" th:object="${gizmo}">
+			<div id="buttonDIV">
+				<button class="boton_change" type="submit" id="button">CHANGE
+					PASSWORD</button>
+			</div>
+		</form>
+	</div>
+	<input type="button" class="icono_return" onclick="history.back()"
+		name="volver_atras" value="&#8617;" />
+</body>
+</html>

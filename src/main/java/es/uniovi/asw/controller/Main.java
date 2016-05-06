@@ -204,7 +204,7 @@ public class Main {
 
 	}
 
-	@RequestMapping(value = "/referendum", method = RequestMethod.POST)
+	@RequestMapping(value = "/modificar_elecciones")
 	public String modificar(Elecciones elecciones, Model model) {
 		LOG.info("Modificar elecciones page access");
 		return "/modificar_elecciones";

@@ -1,6 +1,7 @@
 # Voting System
 
-Voting System Prueba heroku
+Voting System: http://arquisoft.github.io/Voting_4b/ 
+Prueba heroku: https://voting-4b.herokuapp.com/
 
 # Authors
 
